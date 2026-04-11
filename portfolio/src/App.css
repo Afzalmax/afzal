@@ -1,0 +1,221 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  text-align: left;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.site-logo {
+  font-weight: 600;
+  color: var(--text-h);
+  text-decoration: none;
+}
+
+.site-logo:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover {
+  color: var(--text-h);
+}
+
+.site-nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+main {
+  flex: 1;
+}
+
+.section {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.section--hero {
+  max-width: 48rem;
+  padding-top: clamp(3rem, 10vw, 5rem);
+  padding-bottom: clamp(3rem, 10vw, 5rem);
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+.section h1 {
+  margin: 0 0 0.5rem;
+}
+
+.lede {
+  font-size: 1.25rem;
+  color: var(--text-h);
+  margin: 0 0 0.75rem;
+  font-weight: 500;
+}
+
+.tagline {
+  margin: 0 0 2rem;
+  max-width: 32rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    color 0.2s;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.button--primary {
+  background: var(--accent);
+  color: #fff;
+  border: 2px solid var(--accent);
+}
+
+.button--primary:hover {
+  filter: brightness(1.08);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--text-h);
+  border: 2px solid var(--border);
+}
+
+.button--ghost:hover {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+}
+
+.section-text {
+  margin: 0 0 1rem;
+  max-width: 36rem;
+}
+
+.section-text:last-child {
+  margin-bottom: 0;
+}
+
+.section-text a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section-text a:hover {
+  text-decoration: underline;
+}
+
+.muted {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.project-placeholder {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.project-placeholder li {
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  border: 1px dashed var(--border);
+  background: var(--code-bg);
+}
+
+.section--contact .section-text code {
+  font-size: 0.9em;
+}
+
+.site-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.site-footer code {
+  font-size: 0.85em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .button--primary {
+    color: #0f0f12;
+  }
+}
