@@ -6,6 +6,9 @@ export const site = {
   email: 'rafzal0606@gmail.com',
   github: 'https://github.com/Afzalmax',
   linkedin: 'https://linkedin.com/in/mohamedafzalr',
+  /** Served from `public/`; Vite exposes it at site root. */
+  resumePdf: '/Mohamed_Afzal_R_Resume_Final.docx.pdf',
+  resumeDownloadFilename: 'Mohamed_Afzal_R_Resume.pdf',
   summary:
     'Impact-oriented engineer with 1+ year building enterprise-grade SaaS across FinTech and HRTech. I own backend infrastructure, event-driven architectures, and ship features that scale.',
 }

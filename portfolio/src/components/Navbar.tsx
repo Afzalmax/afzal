@@ -14,6 +14,11 @@ export function Navbar() {
             <a href={`#${id}`}>{id}</a>
           </li>
         ))}
+        <li>
+          <a href={site.resumePdf} download={site.resumeDownloadFilename}>
+            resume
+          </a>
+        </li>
       </ul>
     </nav>
   )

@@ -20,6 +20,13 @@ export function Hero() {
         <div className="hero-cta fade-in d3">
           <a className="btn btn-primary" href="#experience">View experience</a>
           <a className="btn btn-ghost" href="#contact">Get in touch</a>
+          <a
+            className="btn btn-ghost"
+            href={site.resumePdf}
+            download={site.resumeDownloadFilename}
+          >
+            Download resume
+          </a>
         </div>
 
         <div className="hero-stack fade-in d4">
